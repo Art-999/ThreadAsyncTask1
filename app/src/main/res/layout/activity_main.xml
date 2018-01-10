@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arturmusayelyan.threadasynctask1.MainActivity">
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/getJson_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="getJson"
+        android:layout_margin="10dp"/>
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_below="@+id/getJson_btn"
+        android:id="@+id/progressBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+       android:gravity="center"
+        android:layout_below="@id/progressBar1"
+        android:id="@+id/show_json_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+
+</RelativeLayout>
