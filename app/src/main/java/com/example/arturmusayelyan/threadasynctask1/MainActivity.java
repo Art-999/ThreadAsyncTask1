@@ -33,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
         showJsonTv = findViewById(R.id.show_json_tv);
         progressBar = findViewById(R.id.progressBar1);
 
-        new BackGroundTask().execute();
-        isStoragePermissionGranted();
+
+
     }
 
     public void onClick(View view) {
+        isStoragePermissionGranted();
         new BackGroundTask().execute();
     }
 

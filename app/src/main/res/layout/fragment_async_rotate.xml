@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.arturmusayelyan.threadasynctask1.HandlerInRotation">
+
+    <Button
+        android:id="@+id/start_btn_for_AsyncTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar_for_AsyncTask"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/start_btn_for_AsyncTask"
+        android:max="9" />
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:gravity="center"
+        android:id="@+id/show_result_tv_for_AsyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/progressBar_for_AsyncTask"
+        android:text="" />
+
+</RelativeLayout>
