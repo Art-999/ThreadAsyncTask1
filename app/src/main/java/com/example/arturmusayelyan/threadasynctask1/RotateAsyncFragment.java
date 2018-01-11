@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class RotateAsyncFragment extends Fragment implements View.OnClickListener {
     // kam karanq uxaki aveli hesht dzevov manifesti mej mi tox grenq u verj
-    // android:configChanges="orientation|screenSize|keyboardHidden
+    // android:configChanges="orientation|screenSize|keyboardHidden"
     private Button startBtn;
     private TextView showResultTv;
     private ProgressBar progressBar;
