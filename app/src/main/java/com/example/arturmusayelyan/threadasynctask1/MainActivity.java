@@ -34,10 +34,14 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar1);
 
 
-
     }
 
     public void onClick(View view) {
+        //isStoragePermissionGranted();
+//        if(isStoragePermissionGranted()) {
+//            new BackGroundTask().execute();
+//        }
+
         isStoragePermissionGranted();
         new BackGroundTask().execute();
     }
@@ -77,13 +81,16 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 Log.d("Art", "Permission is granted");
+                //stugum em ete granteda heto nor anum em im gorcoxutyunnere
                 return true;
             } else {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                //ete trvac chi apa uzum enq permission
                 return false;
             }
         } else {
             Log.d("Art", "Permission is granted");
+            //avelorda karanq chgrenq karanq nayev amena verevi if-n el chgrenq vortev 23-ic castri depqum henc skzbuma permission uzum appe qasheluc
             return true;
         }
     }
@@ -91,8 +98,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
-            Log.d("Art","Permission: "+permissions[0]+"was "+grantResults[0]);
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("Art", "Permission: " + permissions[0] + "was " + grantResults[0]);
+                //permissione stacela arden u anuma mnacace
+            }
         }
     }
 }
